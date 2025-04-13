@@ -14,7 +14,7 @@
             <ul id="nav-list">
                 <li><a href="#home">首頁</a></li>
                 <li><a href="#about">關於我</a></li>
-                <li><a href="#projects">練習檔</a></li>
+                <li><a href="#projects">自主學習</a></li>
                 <li><a href="#contact">聯繫</a></li>
             </ul>
            
@@ -32,9 +32,6 @@
         <p>我是彰化高中的學生，對撰寫程式充滿興趣，未來想當一位韌體工程師</p>
         
     </section>
-    <div class="彰化高中">
-        <img src="images/16.png" alt="彰化高中">
-    </div>
     
     <section id="projects" class="projects">
         <h2>自主學習計劃書</h2>
@@ -205,20 +202,29 @@
     </section>
 
     <section id="contact" class="contact">
-        <h2>聯絡我</h2>
+        <h2>可以聯絡我</h2>
         <form id="contact-form">
-            <label for="name">名字:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">信箱:</label>
-            <input type="email" id="email" name="email" required>
-
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">名字:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">信箱:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+      
+          <div class="form-group full-width">
             <label for="message">訊息:</label>
             <textarea id="message" name="message" required></textarea>
-
+          </div>
+      
+          <div class="button-wrapper">
             <button type="submit">送出</button>
+          </div>
         </form>
-    </section>
+      </section>
 
     <footer>
         <p>&copy; 2024 ALISON Website. All Rights Reserved.</p>
