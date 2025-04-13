@@ -3,77 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pactice Project(Not original work)</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的個人網站</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-    <button class="menu">&#9776;</button>
-    <h1>烘焙工坊</h1>
-    <nav>
-    <ul>
-        <li><a href="#">最新消息</a></li>
-        <li><a href="#">關於我們</a></li>
-        <li><a href="#">門市據點</a></li>
-        <li><a href="#">會員專區</a></li>
-    </ul>
-    </nav>
+        <button id="hamburger">&#9776;</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#about">關於我</a></li>
+                <li><a href="#projects">練習檔</a></li>
+                <li><a href="#contact">聯繫</a></li>
+            </ul>
+           
+        </nav>
     </header>
 
-    <main>
-
-    <section class="news">
-
-    <h2>健康穀物麵包新鮮出爐!</h2>
-    <p>亞麻的細語、葵花的微風，每一口都是自然的敘事</p>
-    <p><a href="#">瞭解更多</a></p>
+    <section id="home" class="home">
+        <h1>歡迎來到ALISON的網站</h1>
+        <p>此網站是一位高中生的自主學習成果</p>
+        <button onclick="window.location.href='#contact'">聯繫我</button>
     </section>
 
-    <section class="slogan">
-
-    <blockquote>"嚴選天然食材，精湛匠心烘培，<br>讓幸福在每口麵包中的香氣中蔓延"</blockquote>
+    <section id="about" class="about">
+        <h2>關於我</h2>
+        <p>我是彰化高中的學生，對撰寫程式充滿興趣，未來想當一位韌體工程師</p>
+        
     </section>
-
-    <section class="shop">
-
-    <img src="images/Shop.png" alt="烘焙工坊大安店">
-    
-    <div class="info">
-    <h2>8月1號大安旗艦店隆重開張!</h2>
-    <p>享受花園庭園的悠閒時光，內用座位區美食相伴，<br>
-    即日起來店消費加 LINE 好友可獲精緻小點心，等你一同品味!</p>
+    <div class="彰化高中">
+        <img src="images/16.png" alt="彰化高中">
     </div>
-    </section>    
 
-    <section class="product">
-        <div>
-            <img src="images/p1.png" alt="巴黎風法國土司">
-            <h3>巴黎風法國土司</h3>
-            <p>外皮金黃酥脆，內質鬆軟<br>讓你體驗法式浪漫的味覺享受</p>
+    <section id="projects" class="projects">
+        <h2>實作檔案</h2>
+        <div class="project-item">
+            <h3>網頁設計練習</h3>
+            </h3>
+            <p>此為觀看「成為網頁設計師的第一步!快速上手HTML&CSS展開你的網頁設計之旅! 」
+                (PAPAYA 電腦教室) https://www.youtube.com/watch?v=6HHN0G2cwBM 
+                <br/>課程實作專題
+            </p>
+            <div class="folder" id="openFolder">
+                <img src="folder-icon.png" alt="資料夾圖示">
+                <p>我的照片集＜———可點擊</p>
+            </div>
+            
+            <div id="folderModal" class="modal">
+                <span class="close">&times;</span>
+                <div class="modal-gallery">
+                <img src="images/20.png" alt="照片1">
+                <img src="images/21.png" alt="照片2">
+                <img src="images/22.png" alt="照片3">
+                <img src="images/23.png" alt="照片3">
+                <img src="images/24.png" alt="照片3">
+                <img src="images/25.png" alt="照片3">
+                <img src="images/26.png" alt="照片3">
+                <img src="images/27.png" alt="照片3">
+                <img src="images/28.png" alt="照片3">
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="images/p2.png" alt="皇家奶油可頌麵包">
-            <h3>皇家奶油可頌麵包</h3>
-            <p>酥脆口感搭配奶油的濃郁香氣<br>品質簡單而純粹的美味</p>
-        </div>
-        <div>
-            <img src="images/p3.png" alt="健康營養全麥吐司">
-            <h3>健康營養全麥吐司</h3>
-            <p>全麥製成口感柔韌扎實<br>天然養分健康首選</p>
+        
+        <section class="product">
+            <div>
+                <img src="images/17.png" alt="網頁畫面">
+                <h3>網頁畫面</h3>
+            </div>
+            <div>
+                <img src="images/18.png" alt="HTML">
+                <h3>HTML</h3>
+            </div>
+            <div>
+                <img src="images/19.png" alt="CSS">
+                <h3>CSS</h3>
+            </div>
+        </section>
+        <div class="project-item">
+            <h3>實作心得與反思</h3>
+            <p>在學習的過程中，我一步步跟著影片中的老師操作，剛開始常常會遇到不懂的地方，很多語法和標籤都需要先記住用法，才能順利完成練習。
+                不過我發現，許多 HTML 標籤其實都有類似的邏輯，只要多做幾次，就會慢慢上手，也會對它們的功能和使用方式越來越熟悉。
+                至於 CSS，一開始不太會用時，我會上網查資料或詢問 ChatGPT，遇到問題就嘗試解決。透過這樣不斷練習的過程，雖然還沒辦法自己寫出完整的網頁，
+                但至少現在我已經能夠看懂網頁架構，對 HTML 和 CSS 的語法也有基本的判讀能力。
+            </p>
+
         </div>
     </section>
 
-    <section class="newsletter">
-        <p>歡迎訂閱烘焙工坊電子報，可不定期收到訂閱優惠喔!</p>
-        <form>
-            <input type="email" placeholder="請輸入您的Email" required>
-            <button type="submit">送出</button>
+    <section id="notes" class="notes">
+        <h2>📝 我的筆記</h2>
+        <div class="note">
+            <h3>HTML</h3>
+            <p>
+                <img src="images/1.png" alt="筆記圖片" class="note-img" >
+            </p>
+        </div>
+        <div class="note">
+            <h3>HTML</h3>
+            <p>
+                <img src="images/2.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>CSS</h3>
+            <p>
+                <img src="images/3.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>CSS</h3>
+            <p>
+                <img src="images/4.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>CSS選擇器</h3>
+            <p>
+                <img src="images/5.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>CSS選擇器</h3>
+            <p>
+                <img src="images/6.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>Flexbox</h3>
+            <p>
+                <img src="images/7.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>RWD & JavaScript</h3>
+            <p>
+                <img src="images/8.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>JavaScript</h3>
+            <p>
+                <img src="images/9.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>HTML DOM</h3>
+            <p>
+                <img src="images/10.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>HTML DOM</h3>
+            <p>
+                <img src="images/11.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>http 通訊協定</h3>
+            <p>
+                <img src="images/12.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>AJAX & 箭頭函式</h3>
+            <p>
+                <img src="images/13.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>解構賦值</h3>
+            <p>
+                <img src="images/14.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div class="note">
+            <h3>其餘運算Rest Operator & 模組Module</h3>
+            <p>
+                <img src="images/15.png" alt="筆記圖片" class="note-img">
+            </p>
+        </div>
+        <div id="image-modal" class="modal">
+            <img id="modal-img" class="modal-content" />
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>聯絡我</h2>
+        <form id="contact-form">
+            <label for="name">名字:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">信箱:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">訊息:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
         </form>
     </section>
-    </main>
-    
+
     <footer>
-        <p>Copyrigt ◎ 2023 烘焙工坊 All Rights Reserved.</p>
+        <p>&copy; 2024 My Personal Website. All Rights Reserved.</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
