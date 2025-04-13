@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding-top: 80px;
+    padding-top: 61px;
 }
 
 header {
@@ -166,20 +166,40 @@ nav ul li a {
 }
 
 .home {
-    background-color: #f4f4f4;
-    padding: 50px 20px;
+    position: relative;
+    background-image: url('images/16.png'); 
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
     text-align: center;
+    min-height: 500px;
+    color: white;
 }
-
+  
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 0; /* 確保遮罩在背景圖片與文字之下 */
+}
+  
 .home h1 {
-    font-size: 3rem;
+    font-size: 3rem; 
+    z-index: 1; 
+    position: relative;
 }
-
+  
 .home p {
     font-size: 1.2rem;
     margin-top: 20px;
+    z-index: 1;
+    position: relative;
 }
-
+  
 .home button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -187,11 +207,15 @@ nav ul li a {
     color: white;
     border: none;
     cursor: pointer;
+    z-index: 1;
+    position: relative;
 }
-
+  
 .home button:hover {
     background-color: #555;
 }
+  
+  
 
 .about {
     padding: 50px 20px;
@@ -260,40 +284,85 @@ nav ul li a {
 }
 
 .contact {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
+    background-color: #f0f4f8; 
+    padding: 30px 20px;
     text-align: center;
+    overflow-x: hidden;
 }
-
-.contact form {
-    max-width: 600px;
+  
+.contact h2 {
+    margin-bottom: 30px;
+    color: #333;
+}
+  
+#contact-form {
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
-
-.contact label {
-    margin-bottom: 5px;
+  
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-
-.contact input,
-.contact textarea {
-    padding: 10px;
-    margin-bottom: 20px;
+  
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    min-width: 0;
+}
+  
+.full-width {
+    width: 100%;
+}
+  
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+}
+  
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    font-size: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-family: inherit;
+    resize: vertical;
+}
+  
+textarea {
+    min-height: 150px;
+}
+
+.button-wrapper {
+    text-align: center;  /* 讓內部的按鈕置中 */
 }
 
 .contact button {
-    padding: 10px;
-    background-color: #333;
-    color: white;
+    align-self: flex-start;
+    padding: 12px 24px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     border: none;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
-
+  
 .contact button:hover {
-    background-color: #555;
+    background-color: #357ab8;
 }
 
 footer {
@@ -349,5 +418,8 @@ footer {
     .self{
         width: 100%;
         height: auto;
+    }
+    .form-row {
+        flex-direction: column;
     }
 }
